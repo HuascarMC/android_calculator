@@ -39,8 +39,9 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/buttonTwo"
             android:layout_alignBottom="@+id/buttonTwo"
-            android:layout_alignLeft="@+id/buttonFour"
-            android:layout_alignStart="@+id/buttonFour"
+            android:layout_alignLeft="@+id/buttonDot"
+            android:layout_alignStart="@+id/buttonDot"
+            android:onClick="onClick"
             android:text="1"
             android:textSize="20sp" />
 
@@ -55,6 +56,7 @@
             android:layout_toLeftOf="@+id/buttonEqual"
             android:layout_toStartOf="@+id/buttonEqual"
             android:text="2"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
 
@@ -67,6 +69,7 @@
             android:layout_toEndOf="@+id/buttonFive"
             android:layout_toRightOf="@+id/buttonFive"
             android:text="3"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
 
@@ -80,6 +83,7 @@
             android:layout_alignLeft="@+id/buttonSeven"
             android:layout_alignStart="@+id/buttonSeven"
             android:text="4"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -91,6 +95,7 @@
             android:layout_toLeftOf="@+id/buttonEqual"
             android:layout_toStartOf="@+id/buttonEqual"
             android:text="5"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
 
@@ -103,6 +108,7 @@
             android:layout_toEndOf="@+id/buttonEight"
             android:layout_toRightOf="@+id/buttonEight"
             android:text="6"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
 
@@ -113,6 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/editText"
             android:text="7"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -123,6 +130,7 @@
             android:layout_below="@id/editText"
             android:layout_toRightOf="@id/buttonSeven"
             android:text="8"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -133,6 +141,7 @@
             android:layout_below="@id/editText"
             android:layout_toRightOf="@id/buttonEight"
             android:text="9"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         ...
@@ -148,6 +157,7 @@
             android:layout_toLeftOf="@+id/buttonZero"
             android:layout_toStartOf="@+id/buttonZero"
             android:text="."
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -170,6 +180,7 @@
             android:layout_alignRight="@id/buttonNine"
             android:layout_below="@id/buttonThree"
             android:text="="
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -180,6 +191,7 @@
             android:layout_alignTop="@id/buttonNine"
             android:layout_toRightOf="@id/buttonNine"
             android:text="/"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -190,6 +202,7 @@
             android:layout_alignTop="@id/buttonSix"
             android:layout_toRightOf="@id/buttonSix"
             android:text="*"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -201,6 +214,7 @@
             android:layout_toEndOf="@+id/buttonEqual"
             android:layout_toRightOf="@+id/buttonEqual"
             android:text="-"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -211,6 +225,7 @@
             android:layout_alignTop="@id/buttonEqual"
             android:layout_toRightOf="@id/buttonEqual"
             android:text="+"
+            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -222,6 +237,7 @@
             android:layout_below="@id/buttonAdd"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="C"
+            android:onClick="onClick"
             android:textSize="20sp" />
     </RelativeLayout>
 </layout>

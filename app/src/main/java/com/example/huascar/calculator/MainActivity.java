@@ -38,6 +38,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         private void setValueView(String value){
-            binding.editText.setText(value);
+            binding.editText.setText(binding.editText.getText() + value);
         }
 }

@@ -7,18 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.huascar.calculator.databinding.ActivityMainBinding;
+import com.example.huascar.calculator.models.Calculator;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    private double valueOne = Double.NaN;
-    private double valueTwo;
-    private static final char ADDITION = '+';
-    private static final char SUBTRACTION = '-';
-    private static final char MULTIPLICATION = '*';
-    private static final char DIVISION = '/';
+    private Calculator calculator;
 
-    private char CURRENT_ACTION;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {

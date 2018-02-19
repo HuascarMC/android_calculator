@@ -42,9 +42,8 @@ public class CalculatorTest {
 
     @Test
     public void multiplyTest() throws Exception {
-        calculator.numberClick(3);
         calculator.multiply(5);
-        assertEquals(15, calculator.getRunningTotal());
+        assertEquals(0, calculator.getRunningTotal());
     }
 
     @Test

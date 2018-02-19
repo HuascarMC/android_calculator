@@ -74,4 +74,12 @@ public class Calculator {
     public int getRunningTotal() {
         return runningTotal;
     }
+
+    public int getPreviousTotal() {
+        return previousTotal;
+    }
+
+    public String getPreviousOperator() {
+        return previousOperator;
+    }
 }

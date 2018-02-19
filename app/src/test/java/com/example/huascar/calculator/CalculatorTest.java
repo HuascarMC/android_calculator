@@ -53,12 +53,10 @@ public class CalculatorTest {
     }
 
     @Test
-    public void runningTotalTest() throws Exception {
-//        assertEquals();
-    }
-
-    @Test
     public void clearClickTest() throws Exception {
-//        assertEquals();
+        calculator.clearClick();
+        assertEquals(0, calculator.getRunningTotal());
+        assertEquals(0, calculator.getPreviousTotal());
+        assertEquals(null, calculator.getPreviousOperator());
     }
 }

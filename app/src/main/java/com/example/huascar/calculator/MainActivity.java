@@ -21,10 +21,13 @@ public class MainActivity extends AppCompatActivity {
             binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         }
 
-        public void onClick(View view) {
+        public void onNumberClick(View view) {
             Button button = (Button) view;
             String result = this.getButtonText(button);
             this.setValueView(result);
+
+            int number = Integer.parseInt(result);
+            calculator.numberClick(number);
         }
 
         private String getButtonText(Button button) {

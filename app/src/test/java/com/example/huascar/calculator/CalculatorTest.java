@@ -23,7 +23,8 @@ public class CalculatorTest {
 
     @Test
     public void additionTest() throws Exception {
-//        assertEquals();
+        calculator.add(2);
+        assertEquals(2, calculator.getRunningTotal());
     }
 
     @Test

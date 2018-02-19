@@ -22,6 +22,12 @@ public class CalculatorTest {
     }
 
     @Test
+    public void numberClick() throws Exception {
+        calculator.numberClick(7);
+        assertEquals(7, calculator.getRunningTotal());
+    }
+
+    @Test
     public void additionTest() throws Exception {
         calculator.add(2);
         assertEquals(2, calculator.getRunningTotal());
@@ -36,7 +42,9 @@ public class CalculatorTest {
 
     @Test
     public void multiplyTest() throws Exception {
-//        assertEquals();
+        calculator.numberClick(3);
+        calculator.multiply(5);
+        assertEquals(15, calculator.getRunningTotal());
     }
 
     @Test

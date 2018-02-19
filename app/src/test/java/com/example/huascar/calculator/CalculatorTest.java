@@ -20,4 +20,24 @@ public class CalculatorTest {
     public void subtractionTest() throws Exception {
 //        assertEquals();
     }
+
+    @Test
+    public void multiplyTest() throws Exception {
+//        assertEquals();
+    }
+
+    @Test
+    public void divideTest() throws Exception {
+//        assertEquals();
+    }
+
+    @Test
+    public void runningTotalTest() throws Exception {
+//        assertEquals();
+    }
+
+    @Test
+    public void clearClickTest() throws Exception {
+//        assertEquals();
+    }
 }

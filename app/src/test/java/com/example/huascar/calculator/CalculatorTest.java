@@ -48,7 +48,8 @@ public class CalculatorTest {
 
     @Test
     public void divideTest() throws Exception {
-//        assertEquals();
+        calculator.divide(8);
+        assertEquals(0, calculator.getRunningTotal());
     }
 
     @Test

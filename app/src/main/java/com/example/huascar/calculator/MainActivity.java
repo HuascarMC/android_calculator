@@ -30,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
             calculator.numberClick(number);
         }
 
+        public void onOperatorClick(View view) {
+            Button button = (Button) view;
+            String result = this.getButtonText(button);
+
+            calculator.operatorClick(result);
+        }
+
         private String getButtonText(Button button) {
             String result = button.getText().toString();
             return result;

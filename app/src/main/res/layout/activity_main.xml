@@ -238,11 +238,11 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@id/buttonAdd"
-            android:layout_below="@id/buttonAdd"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/buttonEqual"
+            android:layout_toEndOf="@+id/buttonEqual"
+            android:layout_toRightOf="@+id/buttonEqual"
+            android:onClick="onClearClick"
             android:text="C"
-            android:onClick="onClick"
             android:textSize="20sp" />
     </RelativeLayout>
 </layout>

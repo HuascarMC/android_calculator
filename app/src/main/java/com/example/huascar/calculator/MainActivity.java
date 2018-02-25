@@ -32,16 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
         public void onOperatorClick(View view) {
             Button button = (Button) view;
-            String result = this.getButtonText(button);
+            String value = this.getButtonText(button);
 
-            calculator.operatorClick(result);
+            calculator.operatorClick(value);
+            String result = String.valueOf(calculator.getRunningTotal());
+            this.setValueView(result);
         }
 
-        public void onDotClick (View view) {
+        public void onClearClick (View view) {
             Button button = (Button) view;
-            String result = this.getButtonText(button);
+            String value = this.getButtonText(button);
 
-//            calculator.addDot(result);
+            binding.editText.setText("");
+            calculator.clearClick();
         }
 
         private String getButtonText(Button button) {
@@ -51,5 +54,10 @@ public class MainActivity extends AppCompatActivity {
 
         private void setValueView(String value){
             binding.editText.setText(binding.editText.getText() + value);
+        }
+
+        public void onClearClick() {
+            this.setValueView("");
+            calculator.clearClick();
         }
 }

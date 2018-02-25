@@ -41,6 +41,9 @@ public class Calculator {
         switch (operator) {
             case "+":
                 this.add(this.runningTotal);
+                System.out.println(this.runningTotal);
+                System.out.println(this.previousTotal);
+                System.out.println(this.newTotal);
                 break;
             case "-":
                 this.subtract(this.runningTotal);

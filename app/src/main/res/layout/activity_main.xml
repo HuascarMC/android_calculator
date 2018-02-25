@@ -158,8 +158,8 @@
             android:layout_below="@+id/buttonOne"
             android:layout_toLeftOf="@+id/buttonZero"
             android:layout_toStartOf="@+id/buttonZero"
+            android:onClick="onNumberClick"
             android:text="."
-            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -182,8 +182,8 @@
             android:layout_height="wrap_content"
             android:layout_alignRight="@id/buttonNine"
             android:layout_below="@id/buttonThree"
+            android:onClick="onOperatorClick"
             android:text="="
-            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -191,10 +191,12 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/buttonNine"
-            android:layout_toRightOf="@id/buttonNine"
+            android:layout_alignBaseline="@+id/buttonNine"
+            android:layout_alignBottom="@+id/buttonNine"
+            android:layout_toEndOf="@+id/buttonSix"
+            android:layout_toRightOf="@+id/buttonSix"
+            android:onClick="onOperatorClick"
             android:text="/"
-            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -204,8 +206,8 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/buttonSix"
             android:layout_toRightOf="@id/buttonSix"
+            android:onClick="onOperatorClick"
             android:text="*"
-            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -216,8 +218,8 @@
             android:layout_below="@+id/buttonMultiply"
             android:layout_toEndOf="@+id/buttonEqual"
             android:layout_toRightOf="@+id/buttonEqual"
+            android:onClick="onOperatorClick"
             android:text="-"
-            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button
@@ -227,8 +229,8 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/buttonEqual"
             android:layout_toRightOf="@id/buttonEqual"
+            android:onClick="onOperatorClick"
             android:text="+"
-            android:onClick="onClick"
             android:textSize="20sp" />
 
         <Button

@@ -82,4 +82,8 @@ public class Calculator {
     public String getPreviousOperator() {
         return previousOperator;
     }
+
+//    public void addDot() {
+//        this.runningTotal
+//    }
 }

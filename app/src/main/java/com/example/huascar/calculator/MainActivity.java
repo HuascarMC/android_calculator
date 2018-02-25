@@ -12,7 +12,7 @@ import com.example.huascar.calculator.models.Calculator;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    private Calculator calculator;
+    private Calculator calculator = new Calculator();
 
 
         @Override
@@ -35,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
             String result = this.getButtonText(button);
 
             calculator.operatorClick(result);
+        }
+
+        public void onDotClick (View view) {
+            Button button = (Button) view;
+            String result = this.getButtonText(button);
+
+//            calculator.addDot(result);
         }
 
         private String getButtonText(Button button) {

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             calculator.operatorClick(value);
             String result = String.valueOf(calculator.getRunningTotal());
-            this.setValueView(result);
+            binding.editText.setText(result);
         }
 
         public void onClearClick (View view) {
@@ -54,10 +54,5 @@ public class MainActivity extends AppCompatActivity {
 
         private void setValueView(String value){
             binding.editText.setText(binding.editText.getText() + value);
-        }
-
-        public void onClearClick() {
-            this.setValueView("");
-            calculator.clearClick();
         }
 }

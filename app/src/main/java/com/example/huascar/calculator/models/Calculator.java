@@ -6,8 +6,8 @@ package com.example.huascar.calculator.models;
 
 public class Calculator {
     private String previousOperator; // the last operator the user clicked
-    private int previousTotal = 0;       // the total of the previous operation
-    private boolean newTotal;         // whether the previous operation has just been calculated
+    private int previousTotal = 0;   // the total of the previous operation
+    private boolean newTotal;        // whether the previous operation has just been calculated
     private int runningTotal = 0;
     
 
@@ -41,9 +41,6 @@ public class Calculator {
         switch (operator) {
             case "+":
                 this.add(this.runningTotal);
-                System.out.println(this.runningTotal);
-                System.out.println(this.previousTotal);
-                System.out.println(this.newTotal);
                 break;
             case "-":
                 this.subtract(this.runningTotal);
@@ -62,6 +59,7 @@ public class Calculator {
             this.previousOperator = operator;
         }
 
+        System.out.println(this.runningTotal);
         this.previousTotal = this.runningTotal;
         this.newTotal = true;
     }
@@ -85,8 +83,4 @@ public class Calculator {
     public String getPreviousOperator() {
         return previousOperator;
     }
-
-//    public void addDot() {
-//        this.runningTotal
-//    }
 }

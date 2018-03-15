@@ -36,7 +36,6 @@ public class CalculatorTest {
     @Test
     public void subtractionTest() throws Exception {
         calculator.subtract(4);
-        System.out.print(calculator.getRunningTotal());
         assertEquals(-4, calculator.getRunningTotal());
     }
 

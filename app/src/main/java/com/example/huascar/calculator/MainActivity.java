@@ -11,7 +11,7 @@ import com.example.huascar.calculator.models.Calculator;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    ActivityMainBinding binding;
     Calculator calculator = new Calculator();
 
 
@@ -47,16 +47,13 @@ public class MainActivity extends AppCompatActivity {
             calculator.clearClick();
         }
 
-        private String getButtonText(Button button) {
+        String getButtonText(Button button) {
             String result = button.getText().toString();
             return result;
         }
 
-        private void setValueView(String value){
+        void setValueView(String value){
             binding.editText.setText(binding.editText.getText() + value);
         }
 
-        public Calculator getCalculator() {
-            return calculator;
-        }
 }

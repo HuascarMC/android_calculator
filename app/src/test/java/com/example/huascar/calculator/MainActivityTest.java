@@ -24,19 +24,32 @@ public class MainActivityTest {
 
 
     @Test
-    public void OnNumberClick(View view) throws Exception {
-        mainActivity.onNumberClick(buttonSeven);
+    public void OnNumberClickTest() throws Exception {
+        mainActivity.onNumberClick(mainActivity.binding.buttonSeven);
         assertEquals(7, mainActivity.calculator.getRunningTotal());
     }
 
     @Test
-    public void OnOperatorClick(View view) throws exception {
-        mainActivity.onOperatorClick(buttonAdd)
-        assertEquals('+', mainActivity.onOperatorClick(buttonAdd);
+    public void OnOperatorClickTest() throws Exception {
+        mainActivity.onOperatorClick(mainActivity.binding.buttonAdd);
+        assertEquals('+', mainActivity.calculator.getPreviousOperator());
     }
 
     @Test
-    public void onClearClick(View view) throws exception {
-        assertEquals();
+    public void onClearClickTest() throws Exception {
+        mainActivity.onClearClick(mainActivity.binding.buttonClear);
+        assertEquals(0, mainActivity.calculator.getRunningTotal());
+    }
+
+    @Test
+    public void getButtonTextTest() throws Exception {
+        String buttonText = mainActivity.getButtonText(mainActivity.binding.buttonEight);
+        assertEquals(8, buttonText);
+    }
+
+    @Test
+    public void setValueViewTest() throws Exception {
+        mainActivity.setValueView("TEST");
+        assertEquals("TEST", mainActivity.binding.editText.getText());
     }
 }

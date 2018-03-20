@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
             String result = String.valueOf(calculator.getRunningTotal());
 
             this.setValueView(result);
+            if (val == '=') {
+                this.setValueView(result);
+            }
 
         }
 

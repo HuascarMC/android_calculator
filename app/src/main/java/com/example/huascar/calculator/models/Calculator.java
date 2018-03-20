@@ -48,7 +48,7 @@ public class Calculator {
                 case '+':
                     this.add(this.runningTotal);
                     this.handleOperator(operator);
-//                    break;
+                    break;
                 case '-':
                     this.subtract(this.runningTotal);
                     this.handleOperator(operator);
@@ -64,13 +64,13 @@ public class Calculator {
             }
         }
         this.handleOperator(operator);
-
+//
     }
 
     private void handleOperator(char operator) {
-        System.out.print(operator);
         if (operator == '=') {
             this.previousOperator = ' ';
+            this.runningTotal = this.previousTotal;
         } else {
             this.previousOperator = operator;
         }

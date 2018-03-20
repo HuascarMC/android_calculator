@@ -58,6 +58,15 @@ public class CalculatorTest {
     }
 
     @Test
+    public void operatorClickAfterPrevious() throws  Exception {
+        calculator.operatorClick('=');
+        calculator.numberClick(3);
+        calculator.operatorClick('=');
+        calculator.numberClick(1);
+
+    }
+
+    @Test
     public void clearClickTest() throws Exception {
         calculator.clearClick();
         assertEquals(0, calculator.getRunningTotal());

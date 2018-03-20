@@ -6,14 +6,13 @@ package com.example.huascar.calculator.models;
 
 public class Calculator {
     private String previousOperator; // the last operator the user clicked
-    private int previousTotal = 0;   // the total of the previous operation
+    private int previousTotal;   // the total of the previous operation
     private boolean newTotal;        // whether the previous operation has just been calculated
-    private int runningTotal = 0;
-    
+    private int runningTotal;
+
 
     public void add(int number) {
         this.runningTotal = (this.previousTotal + number);
-        System.out.print(this.runningTotal);
     }
 
     public void subtract(int number) {
@@ -39,21 +38,30 @@ public class Calculator {
     }
 
     public void operatorClick(String operator) {
-        switch (operator) {
-            case "+":
-                this.add(this.runningTotal);
-                break;
-            case "-":
-                this.subtract(this.runningTotal);
-                break;
-            case "*":
-                this.multiply(this.runningTotal);
-                break;
-            case "/":
-                this.divide(this.runningTotal);
-                break;
+        if ((this.previousOperator != null) && (this.getPreviousTotal() > 0 )) {
+            switch (operator) {
+                case "+":
+                    this.add(this.runningTotal);
+                    this.handleOperator(operator);
+                    break;
+                case "-":
+                    this.subtract(this.runningTotal);
+                    this.handleOperator(operator);
+                    break;
+                case "*":
+                    this.multiply(this.runningTotal);
+                    this.handleOperator(operator);
+                    break;
+                case "/":
+                    this.divide(this.runningTotal);
+                    this.handleOperator(operator);
+                    break;
+            }
         }
 
+    }
+
+    private void handleOperator(String operator) {
         if (operator == "=") {
             this.previousOperator = null;
         } else {

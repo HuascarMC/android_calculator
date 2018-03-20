@@ -38,9 +38,8 @@ public class MainActivity extends AppCompatActivity {
             calculator.operatorClick(value);
             String result = String.valueOf(calculator.getRunningTotal());
 
-            if ( calculator.getNewTotal() || value.equals("=")) {
-                this.setValueView(result);
-            }
+            this.setValueView(result);
+
         }
 
         public void onClearClick (View view) {

@@ -52,10 +52,16 @@ public class CalculatorTest {
     }
 
     @Test
+    public void operatorClick() throws Exception {
+        calculator.operatorClick('-');
+        assertEquals(Character.toString('-'), Character.toString(calculator.getPreviousOperator()));
+    }
+
+    @Test
     public void clearClickTest() throws Exception {
         calculator.clearClick();
         assertEquals(0, calculator.getRunningTotal());
         assertEquals(0, calculator.getPreviousTotal());
-        assertEquals(null, calculator.getPreviousOperator());
+        assertEquals(' ', calculator.getPreviousOperator());
     }
 }

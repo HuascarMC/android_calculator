@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         void setValueView(String value) {
-//            if (calculator.getNewTotal() || binding.editText.getText().equals("0") ) {
                 binding.editText.setText(value);
-//            }
         }
 }

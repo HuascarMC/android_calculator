@@ -13,6 +13,7 @@ public class Calculator {
 
     public void add(int number) {
         this.runningTotal = (this.previousTotal + number);
+        System.out.print(this.runningTotal);
     }
 
     public void subtract(int number) {
@@ -34,7 +35,7 @@ public class Calculator {
             this.newTotal = false;
         }
 
-        this.runningTotal = this.runningTotal + number;
+        this.runningTotal = (this.runningTotal + number);
     }
 
     public void operatorClick(String operator) {
@@ -59,7 +60,6 @@ public class Calculator {
             this.previousOperator = operator;
         }
 
-        System.out.println(this.runningTotal);
         this.previousTotal = this.runningTotal;
         this.newTotal = true;
     }
@@ -83,4 +83,6 @@ public class Calculator {
     public String getPreviousOperator() {
         return previousOperator;
     }
+
+    public boolean getNewTotal() { return this.newTotal; }
 }

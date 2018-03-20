@@ -1,5 +1,8 @@
 package com.example.huascar.calculator;
 
+import android.annotation.SuppressLint;
+import android.test.AndroidTestCase;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import com.example.huascar.calculator.models.Calculator;
@@ -13,9 +16,20 @@ import static org.junit.Assert.assertEquals;
  * Created by huascar on 25/02/2018.
  */
 
-public class MainActivityTest {
+public class MainActivityTest extends AndroidTestCase {
 
     private MainActivity mainActivity;
+    private View customView;
+
+
+    @SuppressLint("InflateParams")
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        customView = LayoutInflater.from(getContext())
+                .inflate(R.layout.activity_main, null);
+    }
+
 
     @Before
     public void before() {
@@ -25,7 +39,7 @@ public class MainActivityTest {
 
     @Test
     public void OnNumberClickTest() throws Exception {
-        mainActivity.onNumberClick(mainActivity.binding.buttonSeven);
+        mainActivity.onNumberClick(customView.findViewById(9));
         assertEquals(7, mainActivity.calculator.getRunningTotal());
     }
 

@@ -19,18 +19,16 @@ public class MainActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-            this.setValueView("0");
         }
 
         public void onNumberClick(View view) {
             Button button = (Button) view;
             String result = this.getButtonText(button);
-            if (calculator.getNewTotal()) {
-                this.setValueView(result);
-            }
+
 
             int number = Integer.parseInt(result);
             calculator.numberClick(number);
+            this.setValueView(result);
         }
 
         public void onOperatorClick(View view) {
@@ -39,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
             calculator.operatorClick(value);
             String result = String.valueOf(calculator.getRunningTotal());
-            if ( calculator.getNewTotal() )
+
+            if ( calculator.getNewTotal() || value.equals("=")) {
                 this.setValueView(result);
+            }
         }
 
         public void onClearClick (View view) {
@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
             return result;
         }
 
-        void setValueView(String value){
-            binding.editText.setText(value);
+        void setValueView(String value) {
+//            if (calculator.getNewTotal() || binding.editText.getText().equals("0") ) {
+                binding.editText.setText(value);
+//            }
         }
 }

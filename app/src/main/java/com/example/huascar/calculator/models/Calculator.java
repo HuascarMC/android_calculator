@@ -5,10 +5,11 @@ package com.example.huascar.calculator.models;
  */
 
 public class Calculator {
-    private String previousOperator; // the last operator the user clicked
+    private char previousOperator; // the last operator the user clicked
     private int previousTotal;   // the total of the previous operation
     private boolean newTotal;        // whether the previous operation has just been calculated
     private int runningTotal;
+    private boolean previousTotalChange;
 
 
     public void add(int number) {
@@ -37,44 +38,45 @@ public class Calculator {
         this.runningTotal = (this.runningTotal + number);
     }
 
-    public void operatorClick(String operator) {
-        if ((this.previousOperator != null) && (this.getPreviousTotal() > 0 )) {
+    public void operatorClick(char operator) {
+//        if ((this.previousOperator != null) && (this.previousTotalChange)) {
             switch (operator) {
-                case "+":
+                case '+':
                     this.add(this.runningTotal);
                     this.handleOperator(operator);
                     break;
-                case "-":
+                case '-':
                     this.subtract(this.runningTotal);
                     this.handleOperator(operator);
                     break;
-                case "*":
+                case '*':
                     this.multiply(this.runningTotal);
                     this.handleOperator(operator);
                     break;
-                case "/":
+                case '/':
                     this.divide(this.runningTotal);
                     this.handleOperator(operator);
                     break;
-            }
+//            }
         }
 
     }
 
-    private void handleOperator(String operator) {
-        if (operator == "=") {
-            this.previousOperator = null;
+    private void handleOperator(char operator) {
+        if (operator == '=') {
+            this.previousOperator = ' ';
         } else {
             this.previousOperator = operator;
         }
 
         this.previousTotal = this.runningTotal;
         this.newTotal = true;
+        this.previousTotalChange = true;
     }
 
     public void clearClick() {
         if (this.runningTotal == 0) {
-            this.previousOperator = null;
+            this.previousOperator = ' ';
             this.previousTotal = 0;
         }
         this.runningTotal = 0;
@@ -88,7 +90,7 @@ public class Calculator {
         return previousTotal;
     }
 
-    public String getPreviousOperator() {
+    public char getPreviousOperator() {
         return previousOperator;
     }
 

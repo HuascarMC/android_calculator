@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         public void onOperatorClick(View view) {
             Button button = (Button) view;
             String value = this.getButtonText(button);
-
-            calculator.operatorClick(value);
+            char val = value.charAt(0);
+            calculator.operatorClick(val);
             String result = String.valueOf(calculator.getRunningTotal());
 
             this.setValueView(result);
